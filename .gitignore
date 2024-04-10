@@ -5,6 +5,6 @@
 
 # Python cache and environments
 __pycache__/
-env/
-venv/
+.env/
+.venv/
 
