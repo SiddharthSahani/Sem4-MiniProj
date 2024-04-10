@@ -1,11 +1,43 @@
 # create flask server
 import flask as f
+from flask import request
+import pandas as pd
+import joblib
+import pickle
+
 
 app = f.Flask(__name__)
 
+#TODO: ADD CSS
 
-@app.route('/')
-def hello():
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            return 'No file uploaded', 400
+
+        file = request.files['file']
+        if file.filename == '':
+            return 'No file selected', 400
+
+        if not file.filename.endswith('.csv'):
+            return 'Invalid file format. Only CSV files are allowed', 400
+
+        df = pd.read_csv(file.stream)
+        
+        df.columns = ['duration', 'src_bytes', 'dst_bytes', 'su_attempted', 'num_root', 'serror_rate', 'srv_serror_rate', 'rerror_rate', 'srv_rerror_rate', 'same_srv_rate', 'diff_srv_rate', 'srv_diff_host_rate', 'dst_host_count', 'dst_host_srv_count', 'dst_host_same_srv_rate', 'dst_host_diff_srv_rate', 'dst_host_same_src_port_rate', 'dst_host_srv_diff_host_rate', 'dst_host_serror_rate', 'dst_host_srv_serror_rate', 'dst_host_rerror_rate', 'dst_host_srv_rerror_rate']
+        
+        with open('../KNN.sav', 'rb') as file:
+            model = pickle.load(file)
+
+        predictions = model.predict(df)
+
+        df['predictions'] = predictions
+
+        html_table = df.to_html(classes='table table-striped', index=False)
+        html_table = df[['duration', 'src_bytes', 'dst_bytes', 'su_attempted', 'predictions']].to_html(classes='table table-striped')
+        return f.render_template('index.html', table=html_table)
+        
     return f.render_template('index.html')
 
 
