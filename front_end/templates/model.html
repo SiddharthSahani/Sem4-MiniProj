@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="/">Home</a>
+        </div>
+        <div class="nav-right">
+            <a href="about.html">About</a>
+            <a href="model.html">Try it out!</a>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="nocenter">
+        
+            <div class="model-form">
+                <h1>File Upload Form</h1>
+                <form action="model.html" method="post" enctype="multipart/form-data" class="form-inputs">
+                    
+                    <label for="input-tag">
+                        <input type="file" name="file" accept=".csv" id="input-tag">
+                        <span class="upload-btn">Upload</span>
+                    </label>
+                    
+                    
+                    <button type="submit">Next</button>
+                </form>
+
+                <div>
+                    {{ table | safe }}
+                </div> 
+                
+            </div>
+
+            
+           
+        </div>
+
+    </div>
+    
+
+
+</body>
+</html>

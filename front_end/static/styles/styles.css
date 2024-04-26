@@ -1,0 +1,331 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+     background-color: rgb(31, 31, 36);
+}
+.navbar {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #333;
+    justify-content: right;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    font-weight: semi-bold;
+    text-align: center;
+    justify-content: right;
+    padding: 14px 20px;
+    border-radius: 0.45rem;
+    text-decoration: none;
+    transition: ease-in-out 0.15s;
+}
+.navbar a:hover {
+    background-color: #dddddd36;
+    color: white;
+    transition: ease-in-out 0.05s;
+}
+
+.nav-right {
+    float: right;
+    display: flex;
+    gap: 10px;
+}
+.content{
+    padding-top:48px;
+    width: 100%;
+    height: 90%;
+    background-color: rgb(31, 31, 36);
+    display: flex;
+    justify-content: center;
+  
+    flex-direction: column;
+}
+body,:root{
+    height: 100%;
+    width: 100%;
+}
+h1.hero{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    
+    font-weight: bolder;
+    /* add gradient css text to it purple blue */
+    background: linear-gradient(90deg, rgb(10, 173, 255) 0%, rgb(0, 247, 255) 50%, rgba(5, 222, 246, 0.897) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+p.desc
+{
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+    font-weight: medium;
+}
+h2.feat{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.box{
+    width: 33%;
+    height: 48px;
+    background-color: rgb(51, 51, 54);
+    border-radius: 0.45rem;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: ease-in-out 0.15s;
+    color: #ffffff;
+    padding: 5px;
+}
+.dev{
+    /* background-color: rgb(216, 140, 140); */
+    width: 70%;
+    height: 70%;
+    border-radius: 1.25rem;
+    padding: 1%;
+}
+
+.dev-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.developer{
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    height: 80%;
+    width: 100%;
+    /* background-color: rgb(51, 51, 54); */
+}
+
+.about-us{
+    font-size: 2.25rem;
+    background-color: #333;
+    border-radius: 1.25rem;
+    padding: 1%;
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+    font-weight: medium;
+}
+
+.row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 5%;
+    /* background-color: red; */
+    width: 100%;
+    height: 50%;
+    padding: 1%;
+
+}
+
+.row2{
+    /* background-color: red; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 5%;
+    padding: 1%;
+}
+
+.profile{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(51, 51, 54);
+    border-radius: 0.45rem;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: ease-in-out 0.15s;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.nocenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.model-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(51, 51, 54); */
+    border-radius: 0.45rem;
+    color: #ffffff;
+    gap: 24px;
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 10px;
+    width: 70%;
+    /* background-color: rgb(51, 51, 54); */
+    border-radius: 0.45rem;
+    color: #ffffff;
+}
+
+.form-inputs button{
+    width: 100%;
+    height: 48px;
+    background-color: rgb(51, 51, 54);
+    border-radius: 0.45rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: ease-in-out 0.15s;
+    color: #ffffff;
+}
+
+.form-inputs button:hover{
+    background-color: #dddddd36;
+    color: white;
+    transition: ease-in-out 0.05s;
+}
+
+.form-inputs input{
+    width: 100%;
+    height: 48px;
+    background-color: rgb(51, 51, 54);
+    border-radius: 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: ease-in-out 0.15s;
+    color: #ffffff;
+}
+
+.form-inputs input:hover{
+    background-color: #dddddd36;
+    color: white;
+    transition: ease-in-out 0.05s;
+}
+
+.input-tag{
+    font-size: 1rem;
+    color: white;
+    text-align: left;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: red;
+    width: 100%;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.upload-btn{
+    width: 100%;
+    height: 48px;
+    background-color: rgb(51, 51, 54);
+    border-radius: 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: ease-in-out 0.15s;
+    color: #ffffff;
+    font-size: small;
+}
+
+.upload-btn:hover{
+    background-color: #dddddd36;
+    color: white;
+    transition: ease-in-out 0.05s;
+}
+
+
+table{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(51, 51, 54);
+    border: none;
+    color: #ffffff;
+    padding: 5px;
+}
+
+th{
+    background-color: rgb(51, 51, 54);
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    text-align: left;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+td{
+    background-color: rgb(51, 51, 54);
+    border:none;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    border: rgba(211, 211, 211, 0.11) 1px solid;
+    border-radius: .15rem;
+}
+
+th:hover{
+    background-color: #dddddd36;
+    color: white;
+    transition: ease-in-out 0.05s;
+}
+
+td:hover{
+    background-color: #dddddd36;
+    color: white;
+    transition: ease-in-out 0.05s;
+}
+ 
+
+
