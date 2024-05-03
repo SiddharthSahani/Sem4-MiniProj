@@ -108,6 +108,7 @@ h2.feat{
 }
 
 .dev-content{
+    padding-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +134,7 @@ h2.feat{
     padding: 1%;
     color: white;
     text-align: center;
-    margin-top: 2%;
+    /* margin-top: 2%; */
     font-weight: medium;
 }
 
@@ -163,6 +164,7 @@ h2.feat{
 }
 
 .profile{
+    gap: 10px;
     width: 50%;
     height: 100%;
     background-color: rgb(51, 51, 54);
@@ -257,7 +259,7 @@ h2.feat{
     text-align: left;
     font-weight: bolder;
     cursor: pointer;
-    background-color: red;
+    /* background-color: red; */
     width: 100%;
 }
 
@@ -326,6 +328,3 @@ td:hover{
     color: white;
     transition: ease-in-out 0.05s;
 }
- 
-
-

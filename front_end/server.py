@@ -5,7 +5,6 @@ import pickle
 
 app = Flask(__name__)
 
-#TODO: ADD CSS
 
 @app.route("/model.html", methods=['GET', 'POST'])
 def model():

@@ -22,7 +22,7 @@
         <div class="nocenter">
         
             <div class="model-form">
-                <h1>File Upload Form</h1>
+                <h1>Upload a file and test our AI out!!</h1>
                 <form action="model.html" method="post" enctype="multipart/form-data" class="form-inputs">
                     
                     <label for="input-tag">
@@ -50,3 +50,13 @@
 
 </body>
 </html>
+
+<script>
+    document.getElementById('input-tag').addEventListener('change', function() {
+        if (this.value) {
+            this.classList.add('file-uploaded');
+        } else {
+            this.classList.remove('file-uploaded');
+        }
+    });
+</script>
